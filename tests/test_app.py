@@ -13,7 +13,7 @@ def test_deposit(app, client):
     assert res.status_code == 200
     expected = {'balance': 500}
     assert expected == json.loads(res.get_data(as_text=True))
-    assert False
+
 
 def test_deposit_2(app, client):
     del app
